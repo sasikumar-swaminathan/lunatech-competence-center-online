@@ -1,0 +1,236 @@
+{
+  "id": "ansible",
+  "name": "Ansible",
+  "description": "Ansible is an IT automation tool that automates cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs.",
+  "tags": ["ansible"],
+  "image": "/images/ansible.svg",
+  "topics": [
+    {
+      "id": "ansible-basics",
+      "name": "Ansible basics",
+      "description": "Ansible is IT automation engine. It can  that The starting point for learning Ansible is by getting familiar with [YAML|http://www.yaml.org/start.html], since it is the common language across all the files Ansible uses. YAML is a data serialization language designed to be human-friendly, it is very easy to learn and use. But it is strict in terms of formatting, so one needs to be careful while coding to avoid undesired surprises.",
+      "tags": [],
+      "resources": [],
+      "abilities": [],
+      "assessment-questions": []
+    },
+    {
+      "id": "yaml-basics",
+      "name": "YAML basics",
+      "description": "The starting point for learning Ansible is by getting familiar with [YAML|http://www.yaml.org/start.html], since it is the common language across all the files Ansible uses. YAML is a data serialization language designed to be human-friendly, it is very easy to learn and use. But it is strict in terms of formatting, so one needs to be careful while coding to avoid undesired surprises.",
+      "tags": ["yaml-basics"],
+      "dependencies": ["ansible-basics"],
+      "resources": [
+        {
+          "name": "YAML syntax used in Ansible",
+          "type": "documentation",
+          "url": "http://docs.ansible.com/ansible/latest/YAMLSyntax.html",
+          "tags": ["official"]
+        },
+        {
+          "name": "YAML basics",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=cdLNKUoMc6c"
+        },
+        {
+          "name": "YAML basics and exercises (up to 5:45)",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=U9_gfT0n_5Q"
+        }
+      ],
+      "abilities": [
+        "Define different data structures in YAML",
+        "Combine data structures in a YAML file"
+      ],
+
+      "assessment-questions": [
+        { "question": "How do we create a list in YAML?" },
+        { "question": "What is a dictionary in YAML?How do we create a dictionary in YAML?" }
+      ]
+    },
+    {
+      "id": "jinja2",
+      "name": "Jinja2",
+      "description": "Jinja2 is one of the most used template engines for Python. It allows developers to apply different functions and filters when doing interpolation of variables and templating. Conditional, loops, lists can be applied using jinja2 template language.",
+      "tags": ["jinja2"],
+      "dependencies": ["ansible-basics", "yaml-basics"],
+      "resources": [
+        {
+          "name": "Ansible templating",
+          "type": "documentation",
+          "url": "http://docs.ansible.com/ansible/latest/playbooks_templating.html",
+          "tags": ["official"]
+        },
+        {
+          "name": "Ansible jinja2 filters",
+          "type": "documentation",
+          "url": "http://docs.ansible.com/ansible/latest/playbooks_filters.html",
+          "tags": ["official"]
+        },
+        {
+          "name": "Ansible templating",
+          "type": "documentation",
+          "url": "http://jinja.pocoo.org/docs/2.10/templates/",
+          "tags": ["official"]
+        },
+        {
+          "name": "Ansible templating",
+          "type": "documentation",
+          "url": "http://docs.ansible.com/ansible/latest/playbooks_templating.html",
+          "tags": ["official"]
+        },
+        {
+          "name": "Ansible templating",
+          "type": "documentation",
+          "url": "https://blog.codecentric.de/en/2014/08/jinja2-better-ansible-playbooks-templates/",
+          "tags": ["official"]
+        }
+      ],
+      "abilities": [
+        "Manipulate variables by adding filters, mapping, formatting",
+        "Create generic templates to be used by Ansible for performing tasks"
+      ],
+      "assessment-questions": [
+        { "question": "When should we use templates in Ansible?" },
+        { "question": "How do we specify a default value for a variable?" }
+      ]
+    },
+    {
+      "id": "variables",
+      "name": "Variables",
+      "description": "",
+      "tags": [],
+      "dependencies": ["ansible-basics", "yaml-basics", "jinja2"],
+      "resources": [
+        {
+          "name": "Ansible variables",
+          "type": "documentation",
+          "url": "http://docs.ansible.com/ansible/latest/playbooks_variables.html",
+          "tags": ["official"]
+        },
+        {
+          "name": "Ansible variables",
+          "type": "documentation",
+          "url": "https://liquidat.wordpress.com/2016/01/26/howto-introduction-to-ansible-variables/"
+        },
+        {
+          "name": "Ansible variables in templates",
+          "type": "documentation",
+          "url": "https://www.arctiq.ca/our-blog/2017/2/16/ansible-jinja-warrior-loop-variable-scope/"
+        }
+      ],
+      "abilities": [
+        "Learn how/when/where variables can be defined",
+        "Use variables in templates"
+      ],
+      "assessment-questions": []
+    },
+    {
+      "id": "roles",
+      "name": "roles",
+      "description": "Roles in Ansible are an organised way to define tasks, variables, templates, files, etc. This way we can decide which roles are going to be executed in which plays, for which specific hosts, etc.",
+      "tags": [],
+      "dependencies": ["jinja2", "dependencies", "tasks", "variables", "yaml-basics"],
+      "resources": [
+        {
+          "name": "Ansible roles",
+          "type": "documentation",
+          "url": "http://docs.ansible.com/ansible/latest/playbooks_roles.html",
+          "tags": ["official"]
+        }
+      ],
+      "abilities": [],
+      "assessment-questions": []
+    },
+    {
+      "id": "tasks",
+      "name": "Tasks",
+      "description": "",
+      "tags": [],
+      "dependencies": ["yaml-basics", "variables", "jinja2", "modules"],
+      "resources": [],
+      "abilities": [],
+      "assessment-questions": []
+    },
+    {
+      "id": "modules",
+      "name": "Modules",
+      "description": "",
+      "tags": [],
+      "dependencies": ["yaml-basics"],
+      "resources": [],
+      "abilities": [],
+      "assessment-questions": []
+    },
+    {
+      "id": "control-flow",
+      "name": "Control flow",
+      "description": "",
+      "tags": [],
+      "dependencies": ["yaml-basics", "ansible-basics"],
+      "resources": [],
+      "abilities": [],
+      "assessment-questions": []
+    },
+    {
+      "id": "playbook",
+      "name": "Playbook",
+      "description": "",
+      "tags": [],
+      "dependencies": ["dependencies", "roles", "control-flow", "tasks"],
+      "resources": [],
+      "abilities": [],
+      "assessment-questions": []
+    },
+    {
+      "id": "dependencies",
+      "name": "Dependencies",
+      "description": "",
+      "tags": [],
+      "dependencies": ["yaml-basics"],
+      "resources": [],
+      "abilities": [],
+      "assessment-questions": []
+    },
+    {
+      "id": "inventory-file",
+      "name": "Akka Customization",
+      "description": "",
+      "tags": [],
+      "dependencies": ["ansible-basics"],
+      "resources": [],
+      "abilities": [],
+      "assessment-questions": []
+    },
+    {
+      "id": "commands",
+      "name": "Ansible commands",
+      "description": "",
+      "tags": [],
+      "dependencies": ["playbook", "vault", "config-file"],
+      "resources": [],
+      "abilities": [],
+      "assessment-questions": []
+    },
+    {
+      "id": "config-file",
+      "name": "Ansible configuration file",
+      "description": "",
+      "tags": [],
+      "dependencies": ["ansible-basics"],
+      "resources": [],
+      "abilities": [],
+      "assessment-questions": []
+    },
+    {
+      "id": "vault",
+      "name": "Vault",
+      "description": "",
+      "tags": [],
+      "dependencies": ["ansible-basics"],
+      "resources": [],
+      "abilities": [],
+      "assessment-questions": []
+    }
+  ]
+}
